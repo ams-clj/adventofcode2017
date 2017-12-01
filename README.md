@@ -5,8 +5,9 @@ puzzles provided by the members of the Amsterdam Clojure meetup group.
 
 ## Usage
 
-Submit your solution by open a PR. Puzzle solutions are provided using
-the following schema:
+Submit your solution by [opening a
+PR](https://github.com/ams-clj/adventofcode2017/pulls). Puzzle
+solutions are provided using the following schema:
 
     src/adventofcode2017/puzzle${NN}/${github_user}.clj
 
