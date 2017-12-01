@@ -15,6 +15,18 @@ Where:
     ${NN}: a 2-digits number of the puzzle
     ${github_user}: your GitHub user name
 
+## Code of conduct
+
+*DO NOT..*
+
+- ..include the answer in your code
+- ..be harsh on someone else's code
+
+*DO..*
+
+- ..provide positive feedback on other's submissions
+- ..contribute to the shared fun in any possible way
+
 ## License
 
 Copyright © 2017 Amsterdam Clojurians
