@@ -11,8 +11,26 @@
                    #{}
                    seq)))
 
+(defn contains-no-anagrams?
+  [seq]
+  (boolean (reduce (fn [seen? val]
+                     (let [letters (frequencies val)]
+                       (if (seen? letters)
+                         (reduced false)
+                         (conj seen? letters))))
+                   #{}
+                   seq)))
+
 (defn count-valid-passphrases [input]
   (let [line->words (fn [line] (split line #" "))
         lines       (with-in-str input
                       (doall (map line->words (line-seq (reader *in*)))))]
     (count (filter only-unique-vals? lines))))
+
+(defn count-valid-passphrases-2 [input]
+  (let [line->words (fn [line] (split line #" "))
+        valid?      (fn [words] (and (only-unique-vals? words)
+                                     (contains-no-anagrams? words)))
+        lines       (with-in-str input
+                      (doall (map line->words (line-seq (reader *in*)))))]
+    (count (filter valid? lines))))
